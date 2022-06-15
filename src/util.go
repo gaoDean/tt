@@ -93,6 +93,7 @@ func randomText(n int, words []string) string {
     for i := 0; i < n; i++ {
         new := words[rand.Int()%len(words)]
         for lastField(r) == new {
+            rand.Seed(rand.Int63())
             new = words[rand.Int()%len(words)]
         }
 
