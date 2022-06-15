@@ -122,7 +122,7 @@ func createDefaultTyper(scr tcell.Screen) *typer {
 	return NewTyper(scr, true, tcell.ColorDefault,
 		tcell.ColorDefault,
 		tcell.ColorWhite,
-		tcell.ColorPurple,
+		tcell.ColorTeal,
 		tcell.ColorBlue,
 		tcell.ColorMaroon)
 }
