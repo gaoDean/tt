@@ -119,12 +119,12 @@ func showReport(scr tcell.Screen, cpm, wpm int, accuracy float64, attribution st
 }
 
 func createDefaultTyper(scr tcell.Screen) *typer {
-	return NewTyper(scr, true, tcell.ColorDefault,
+	return NewTyper(scr, true, tcell.ColorGray,
 		tcell.ColorDefault,
 		tcell.ColorWhite,
 		tcell.ColorTeal,
 		tcell.ColorBlue,
-		tcell.ColorMaroon)
+		tcell.ColorYellow)
 }
 
 func createTyper(scr tcell.Screen, bold bool, themeName string) *typer {
