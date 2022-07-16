@@ -25,7 +25,7 @@ func init() {
 }
 
 type cell struct {
-	c     rune
+	c	  rune
 	style tcell.Style
 }
 
@@ -80,14 +80,10 @@ func init() {
 	rand.Seed(time.Now().Unix())
 }
 
-func lastField(r string) string {
-    ss := strings.Fields(r) // seperated string
-    return ss[len(ss) - 1] // get last word
-}
-
 func randomText(n int, words []string) string {
 	r := ""
 
+<<<<<<< HEAD
     r += words[rand.Int()%len(words)]
     r += " "
     for i := 0; i < n; i++ {
@@ -96,8 +92,19 @@ func randomText(n int, words []string) string {
             rand.Seed(rand.Int63())
             new = words[rand.Int()%len(words)]
         }
+=======
+	r += words[rand.Int()%len(words)]
+	r += " "
+	var last string
+	for i := 0; i < n; i++ {
+		new := words[rand.Int()%len(words)]
+		for last == new {
+			new = words[rand.Int()%len(words)]
+		}
+>>>>>>> prevent_duplicate_words
 
 		r += new
+		last = new
 		if i != n-1 {
 			r += " "
 		}
